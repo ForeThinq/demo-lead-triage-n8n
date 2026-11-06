@@ -2,10 +2,10 @@
 
 **Never lose another lead.** Every enquiry that hits your form is validated, deduped, scored by AI, logged to Google Sheets, and — if it's worth your time — in your inbox within a minute.
 
-![n8n](https://img.shields.io/badge/n8n-workflow-FF6D5A)
-![Gemini](https://img.shields.io/badge/AI-Gemini%203.8%20Flash-4285F4)
-![Google Sheets](https://img.shields.io/badge/Storage-Google%20Sheets-34A853)
-![Gmail](https://img.shields.io/badge/Alerts-Gmail-EA4335)
+![n8n](https://img.shields.io/badge/n8n-workflow-FF6D5A.svg)
+![Gemini](https://img.shields.io/badge/AI-Gemini_3.8_Flash-4285F4.svg)
+![Google Sheets](https://img.shields.io/badge/Storage-Google_Sheets-34A853.svg)
+![Gmail](https://img.shields.io/badge/Alerts-Gmail-EA4335.svg)
 
 Built by [Forethinq Labs](https://github.com/ForeThinq) as a working demo of the lead-flow automation we sell. Import it, connect your own accounts, and run it — everything below is exactly what the workflow does.
 
