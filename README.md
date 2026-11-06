@@ -3,7 +3,7 @@
 **Never lose another lead.** Every enquiry that hits your form is validated, deduped, scored by AI, logged to Google Sheets, and — if it's worth your time — in your inbox within a minute.
 
 ![n8n](https://img.shields.io/badge/n8n-workflow-FF6D5A)
-![Gemini](https://img.shields.io/badge/AI-Gemini%202.0%20Flash-4285F4)
+![Gemini](https://img.shields.io/badge/AI-Gemini%203.8%20Flash-4285F4)
 ![Google Sheets](https://img.shields.io/badge/Storage-Google%20Sheets-34A853)
 ![Gmail](https://img.shields.io/badge/Alerts-Gmail-EA4335)
 
@@ -35,7 +35,7 @@ flowchart LR
 1. **Lead Form** — a hosted n8n form (name, email, phone, company, service, budget, message).
 2. **Validate & Normalize** — cleans the input, lowercases the email, drops junk submissions before they touch anything.
 3. **Dedupe Check** — compares the email against the Leads sheet. A repeat enquiry is skipped: no second row, no second alert.
-4. **AI Classify (Gemini 2.0 Flash)** — scores the lead 0–100 with a category (HOT / WARM / COLD), a one-line reason, and a suggested next step, judged on fit, budget, and urgency.
+4. **AI Classify (Gemini 3.8 Flash)** — scores the lead 0–100 with a category (HOT / WARM / COLD), a one-line reason, and a suggested next step, judged on fit, budget, and urgency.
 5. **Append to Leads Sheet** — the full record, with score and reasoning, lands in one clean row.
 6. **Instant Alert** — HOT and WARM leads trigger an immediate Gmail alert with everything you need to reply. COLD leads are logged silently.
 7. **Error workflow** (separate file) — if anything in the chain fails, you get a failure alert naming the node and the error, so a lead is never lost silently.
@@ -76,7 +76,7 @@ Full sample data, with the expected result for each lead: [`sample-leads.csv`](s
 | Piece | Used for |
 |---|---|
 | n8n | Workflow engine — form, logic, orchestration (15 nodes + 2-node error workflow) |
-| Google Gemini 2.0 Flash | Lead scoring and reasoning (free API key from Google AI Studio) |
+| Google Gemini 3.8 Flash | Lead scoring and reasoning (free API key from Google AI Studio) |
 | Google Sheets | Lead log — also the dedupe source of truth |
 | Gmail | Instant alerts for HOT / WARM leads, and failure alerts |
 
