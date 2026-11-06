@@ -1,0 +1,12 @@
+# n8n local data & credentials — never commit these
+.n8n/
+*.credentials.json
+
+# Environment / secrets
+.env
+.env.*
+!.env.example
+
+# Dependencies & misc
+node_modules/
+.DS_Store
