@@ -11,6 +11,16 @@ Built by [Forethinq Labs](https://github.com/ForeThinq) as a working demo of the
 
 **Status:** Live-tested on 5 Nov 2026 with real form submissions — 4 of 5 sample cases verified end to end (scores, sheet rows, alerts, duplicate skip). The final spam-case check is still being run. Results table below.
 
+## What this is
+
+A **lead** is a potential customer who asks about your service. **Triage** means sorting those enquiries the moment they arrive, so the good ones get a reply first. This project is a working demo of a system that does exactly that, built as an importable n8n workflow.
+
+**The problem.** Enquiries from a website form land in an inbox. They get read late, read twice, or missed completely, and the serious buyers quietly go to a competitor who replied faster. Nothing sorts them, nothing reminds anyone, and spam sits in the same list as real customers.
+
+**What it does, in plain words.** Every time someone submits the form, the workflow checks the enquiry is genuine, checks the same person has not already enquired, and has AI read the message and score it: how serious is this person, and how good a fit are they for the business (HOT, WARM or COLD, with the reason written out). The enquiry is saved in one clean list in Google Sheets. If it is worth replying to, the owner gets an instant email alert with everything needed to respond. Spam and weak enquiries are still saved, but they never interrupt anyone.
+
+**Who it is for.** Any small business that receives enquiries through a website and loses them in a shared inbox: clinics, real-estate offices, salons, agencies, home services, consultants. In a client build, the form, the scoring rules and the alert all run inside that business's own accounts.
+
 <!-- SCREENSHOTS — embeds ready, uncomment each line when the matching file lands in assets/ (see shot list; nothing here is faked, all captures are from a real local run)
 ![Workflow canvas](assets/workflow-canvas.png)
 ![Lead form](assets/lead-form.png)
