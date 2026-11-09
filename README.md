@@ -9,7 +9,7 @@
 
 Built by [Forethinq Labs](https://github.com/ForeThinq) as a working demo of the lead-flow automation we sell. Import it, connect your own accounts, and run it — everything below is exactly what the workflow does.
 
-**Status:** Live-tested on 5 Nov 2026 with real form submissions — 4 of 5 sample cases verified end to end (scores, sheet rows, alerts, duplicate skip). That test ran on the earlier model, gemini-2.0-flash, so the scores in the results table below are from that model. On 7 Nov 2026 the workflow was switched to Gemini 3.8 Flash, and the retest on the current model is still pending. The final spam-case check is also still being run.
+**Status:** Live-tested on 5 Nov 2026 with real form submissions — 4 of 5 sample cases verified end to end (scores, sheet rows, alerts, duplicate skip). Model not confirmed for that test: the saved execution output is gone, so the model behind the scores in the results table below can't be verified. On 7 Nov 2026 the workflow was switched to Gemini 3.8 Flash, and the retest on the current model is still pending. The final spam-case check is also still being run.
 
 ## What this is
 
