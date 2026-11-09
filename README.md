@@ -9,7 +9,7 @@
 
 Built by [Forethinq Labs](https://github.com/ForeThinq) as a working demo of the lead-flow automation we sell. Import it, connect your own accounts, and run it — everything below is exactly what the workflow does.
 
-**Status:** Live-tested on 5 Nov 2026 with real form submissions — 4 of 5 sample cases verified end to end (scores, sheet rows, alerts, duplicate skip). The final spam-case check is still being run. Results table below.
+**Status:** Live-tested on 5 Nov 2026 with real form submissions — 4 of 5 sample cases verified end to end (scores, sheet rows, alerts, duplicate skip). That test ran on the earlier model, gemini-2.0-flash, so the scores in the results table below are from that model. On 7 Nov 2026 the workflow was switched to Gemini 3.8 Flash, and the retest on the current model is still pending. The final spam-case check is also still being run.
 
 ## What this is
 
@@ -80,6 +80,14 @@ Full sample data, with the expected result for each lead: [`sample-leads.csv`](s
 - **Invalid submissions** (no name, bad email, empty message) are dropped before they touch the sheet.
 - **AI unavailable or returns junk** → the lead still gets logged with a safe fallback score (50 / WARM) and a "review manually" flag.
 - **Any node fails** → the companion error workflow emails you the failing node and error message.
+
+## Known limits
+
+- **Dedupe keys on the email address only.** The same person writing from a different email address counts as a new lead.
+- **Two submissions at the same moment can both slip past dedupe.** Both can pass the check before either row is written, because a spreadsheet has no lock.
+- **The Leads sheet is the database.** The dedupe check reads from it, so a very large sheet will slow the check down.
+- **The error workflow cannot be linked inside an exported file.** After import, select it once in the main workflow's Settings (setup step 7 above).
+- **Scores depend on the model.** After any model change, the results need a retest before they can be trusted.
 
 ## Tech stack
 
